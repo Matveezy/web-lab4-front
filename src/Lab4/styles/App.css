@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+
+header{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 64px;
+    text-align: center;
+    background-color: #D1BBED;
+    /*background: rgb(220,220,220);*/
+    width: 100%;
+}
+
+.page_header_text{
+    color: black ;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 64px;
+    text-align: center;
+}
+
+*{
+    background-color: #D1BBED;
+    /*background: rgb(220,220,220);*/
+}
+
+
+.App{
+    background: #D0B1E5;
+}
+
+.section_lab svg {
+    stroke: rgba(175, 175, 175, 0.92);
+    fill: white;
+    position: absolute;
+    left: 500px;
+    top: 150px;
+}
+
+.section_lab .form {
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    top: 150px;
+    left: 900px;
+    width: 500px;
+    height: 350px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    background: #D0B1E5;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.section_lab .values .x_value {
+    font-size: 20px;
+    margin: 5% 0 0;
+    position: relative;
+    top: 15px;
+    left:5%;
+}
+
+
+/*.section_lab .y_value {*/
+/*    font-size: 20px;*/
+/*    margin: 5% 0 0;*/
+/*    position: relative;*/
+/*    top: 15px;*/
+/*    left:5%;*/
+/*}*/
+
+
+
+/*.section_lab .r_value {*/
+/*    font-size: 20px;*/
+/*    !*margin: 5% 0 0;*!*/
+/*    position: relative;*/
+/*    top: 15px;*/
+/*    left: 5%;*/
+/*}*/
+
+/*.section_lab .client_button {*/
+/*    font-size: 15px;*/
+/*    font-family: 'Open Sans Condensed', sans-serif;*/
+/*    display: flex;*/
+/*    !*background: lightgrey;*!*/
+/*    width: 100px;*/
+/*    height: 35px;*/
+/*    border-radius: 10px;*/
+/*    position: relative;*/
+/*    top: 22px;*/
+/*}*/
+
+/*.section_lab .client_button .submit {*/
+/*    font-size: 19px;*/
+/*    font-family: 'Open Sans Condensed', sans-serif;*/
+/*    background: white;*/
+/*    width: 150px;*/
+/*    height: 35px;*/
+/*    border-radius: 10px;*/
+/*    position: relative;*/
+/*    top: 3px;*/
+/*}*/
+

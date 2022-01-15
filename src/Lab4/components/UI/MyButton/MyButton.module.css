@@ -1,0 +1,14 @@
+.MyBtns{
+    font-size: 19px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    position: relative;
+    top: 3px;
+}
+
+.MyBtns:hover{
+    color: #D0B1E5;
+}
