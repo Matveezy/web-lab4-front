@@ -1,6 +1,6 @@
 import React, {useEffect, useMemo, useRef, useState} from "react";
 // import './styles/App.css'
-import Slider, { Range } from 'rc-slider';
+import Slider, {Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import './Lab4/styles/App.css'
 // import Slider from '@react-native-community/slider'
@@ -28,18 +28,14 @@ import Table from "./Lab4/components/Table";
 
 function App() {
 
-        const [points , setPoints] = useState([
-            // {x : 2 , y: 2 , r : 3},
-            // {x : 1 , y: 1 , r : 5},
-            // {x : 2 , y: 2 , r : 3},
-        ]);
+    const [points, setPoints] = useState([]);
 
 
     return (
         <div className="App">
             <Header/>
             <Svg/>
-   <Form points={points} setPoints={setPoints}/>
+            <Form points={points} setPoints={setPoints}/>
             <Table points={points}/>
         </div>
     )

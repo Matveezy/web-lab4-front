@@ -139,3 +139,13 @@ body{
     /*text-align: center;*/
 }
 
+#Y_error{
+    position: relative;
+    margin-top: 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-size: 20px;
+}
+
