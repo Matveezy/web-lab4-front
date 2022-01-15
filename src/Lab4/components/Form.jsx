@@ -7,10 +7,10 @@ import Validator from "../utils/validator";
 import {getTime} from "../utils/Time";
 import {hitCheck} from "../utils/HitChecker";
 
-const Form = ({points, setPoints}) => {
+const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
 
     const [xValue, setXValue] = useState(1);
-    const [yValue, setYValue] = useState(0);
+    const [yValue, setYValue] = useState('');
     const [rValue, setRValue] = useState(1);
 
     const getExecutionTime = () => {
@@ -26,7 +26,6 @@ const Form = ({points, setPoints}) => {
         }
         const time = getTime();
         const exTime = Date.now() - startTime;
-        const result = hitCheck(xValue, yValue, rValue);
         const newPoint = {
             x: xValue,
             y: yValue,
@@ -37,6 +36,11 @@ const Form = ({points, setPoints}) => {
         }
         Validator.cleanText();
         setPoints([...points, newPoint]);
+    }
+
+    const onChangeR = (e)=>{
+        setRValue(parseInt(e));
+        setRValueForSvg(parseInt(e));
     }
 
     return (
@@ -76,7 +80,7 @@ const Form = ({points, setPoints}) => {
                                 min={-3}
                                 max={5}
                                 step={0.1}
-                                onChange={(e) => setRValue(parseInt(e))}
+                                onChange={(e) => onChangeR(e)}
                             />
                         </div>
                     </div>

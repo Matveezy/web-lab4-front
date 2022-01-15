@@ -29,13 +29,14 @@ import Table from "./Lab4/components/Table";
 function App() {
 
     const [points, setPoints] = useState([]);
+    const [rValueForSvg , setRValueForSvg] = useState(1);
 
 
     return (
         <div className="App">
             <Header/>
-            <Svg/>
-            <Form points={points} setPoints={setPoints}/>
+            <Svg rValue={rValueForSvg}/>
+            <Form points={points} setPoints={setPoints} setRValueForSvg={setRValueForSvg} rValueForSvg={rValueForSvg}/>
             <Table points={points}/>
         </div>
     )

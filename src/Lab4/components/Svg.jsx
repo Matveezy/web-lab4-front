@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Svg = () => {
+const Svg = ({rValue}) => {
     return (
         <div className='section_lab'>
             <svg className="svg_container" id="svg_cont" width="300" height="300" xmlns="http://www.w3.org/2000/svg">
@@ -21,15 +21,19 @@ const Svg = () => {
                 <line x1="140" x2="160" y1="200" y2="200"></line>
                 <line x1="140" x2="160" y1="250" y2="250"></line>
 
-                {/*// <!-- Прямоугольник во второй четверти -->*/}
+                {/*// <!-- Четверь окружности в третьей четверти -->*/}
                 <path stroke="yellow" fill="yellow" fill-opacity="0.3"
                       d="M50,150 A100,100 90 0,0 150,250 L 150,150 Z"></path>
 
-                {/*// <!-- Четверь окружности в третьей четверти -->*/}
+
+
+                {/*Треугольник в первой четверти*/}
                 <polygon stroke="green" fill="green" fill-opacity="0.3" points="150,150 200,150 150,100"></polygon>
 
-                {/*// <!-- Четверть эллипса в первой четверти -->*/}
-                <polygon stroke="blue" fill="blue" fill-opacity="0.3" points="150,150 150,50 100,50 100,150"></polygon>
+
+                {/*// <!-- Прямоугольник во второй четверти -->*/}
+                <polygon stroke="blue" fill="blue" fill-opacity="0.3"
+                         points="150,150 150,50 100,50 100,150"></polygon>
 
                 {/*// <!-- Подписи к осям -->*/}
                 <text x="285" y="135" fill='black'>X</text>
@@ -45,7 +49,7 @@ const Svg = () => {
                 <text x="170" y="202.5" fill='black'>-R/2</text>
                 <text x="170" y="252.5" fill='black'>-R</text>
             </svg>
-            
+
         </div>
     );
 };
