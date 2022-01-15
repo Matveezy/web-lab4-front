@@ -8,8 +8,8 @@ const Svg = () => {
                 <line x1="0" x2="300" y1="150" y2="150"></line>
                 <line x1="150" x2="150" y1="0" y2="300"></line>
                 {/*// <!-- Стрелки к осям -->*/}
-                <polygon points="150,0 145,15 155,15" stroke="black"></polygon>
-                <polygon points="300,150 285,145 285,155" stroke="black"></polygon>
+                <polygon points="150,0 145,15 155,15" stroke="black" fill='black'></polygon>
+                <polygon points="300,150 285,145 285,155" stroke="black" fill='black'></polygon>
                 {/*// <!-- Метки для значений R на оси X -->*/}
                 <line x1="50" x2="50" y1="140" y2="160"></line>
                 <line x1="100" x2="100" y1="140" y2="160"></line>
@@ -20,28 +20,30 @@ const Svg = () => {
                 <line x1="140" x2="160" y1="100" y2="100"></line>
                 <line x1="140" x2="160" y1="200" y2="200"></line>
                 <line x1="140" x2="160" y1="250" y2="250"></line>
+
                 {/*// <!-- Прямоугольник во второй четверти -->*/}
                 <path stroke="yellow" fill="yellow" fill-opacity="0.3"
-                      d="M100,150 A50,50 90 0,1 150,100 L 150,150 Z"></path>
+                      d="M50,150 A100,100 90 0,0 150,250 L 150,150 Z"></path>
 
-                {/*// <!-- Треугольник во третьей четверти -->*/}
-                <polygon stroke="green" fill="green" fill-opacity="0.3" points="150,150 250,150 150,100"></polygon>
+                {/*// <!-- Четверь окружности в третьей четверти -->*/}
+                <polygon stroke="green" fill="green" fill-opacity="0.3" points="150,150 200,150 150,100"></polygon>
+
                 {/*// <!-- Четверть эллипса в первой четверти -->*/}
-                <polygon stroke="blue" fill="blue" fill-opacity="0.3" points="50,250 50,150 150,150 150,250"></polygon>
+                <polygon stroke="blue" fill="blue" fill-opacity="0.3" points="150,150 150,50 100,50 100,150"></polygon>
 
                 {/*// <!-- Подписи к осям -->*/}
-                <text x="285" y="135">X</text>
-                <text x="160" y="15">Y</text>
+                <text x="285" y="135" fill='black'>X</text>
+                <text x="160" y="15" fill='black'>Y</text>
                 {/*// <!-- Значения R на оси X -->*/}
-                <text x="40" y="130">-R</text>
-                <text x="85" y="130">-R/2</text>
-                <text x="190" y="130">R/2</text>
-                <text x="245" y="130">R</text>
+                <text x="40" y="130" fill='black'>-R</text>
+                <text x="85" y="130" fill='black'>-R/2</text>
+                <text x="190" y="130" fill='black'>R/2</text>
+                <text x="245" y="130" fill='black'>R</text>
                 {/*// <!-- Значения R на оси Y -->*/}
-                <text x="170" y="52.5">R</text>
-                <text x="170" y="102.5">R/2</text>
-                <text x="170" y="202.5">-R/2</text>
-                <text x="170" y="252.5">-R</text>
+                <text x="170" y="52.5" fill='black'>R</text>
+                <text x="170" y="102.5" fill='black'>R/2</text>
+                <text x="170" y="202.5" fill='black'>-R/2</text>
+                <text x="170" y="252.5" fill='black'>-R</text>
             </svg>
             
         </div>
