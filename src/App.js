@@ -34,7 +34,7 @@ function App() {
 
     return (
         <div className="App">
-            <Header/>
+            <Header name='Matvey Chukhno' group='P3230' option='30035'/>
             <Svg rValue={rValueForSvg}/>
             <Form points={points} setPoints={setPoints} setRValueForSvg={setRValueForSvg} rValueForSvg={rValueForSvg}/>
             <Table points={points}/>

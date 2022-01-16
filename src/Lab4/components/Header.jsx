@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({name ,  group, option}) => {
     return (
         <header className="page_header">
             <div className="page_header_me">
-                <span className="page_header_text">Matvey Chukhno P3230 </span>
-                <span className="page_header_text"> 30035</span>
+                <span className="page_header_text">{name} {group} </span>
+                <span className="page_header_text"> {option}</span>
             </div>
         </header>
     );

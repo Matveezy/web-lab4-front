@@ -86,7 +86,7 @@ const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
                     </div>
                     <div className="client_button">
                         <MyButton type='submit' value='Submit' className='submit' onClick={submitForm}>Submit</MyButton>
-                        <MyButton type='reset' value='Reset' className='reset' onClick = {() => {}}>Reset</MyButton>
+                        <MyButton type='reset' value='Reset' className='reset' onClick = {() => {setYValue('')}}>Reset</MyButton>
                     </div>
                     <div className='Error_text' id='Error_text'>
                         <span id="Y_error"></span>
