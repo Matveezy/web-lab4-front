@@ -39,15 +39,15 @@ const Svg = ({rValue}) => {
                 <text x="285" y="135" fill='black'>X</text>
                 <text x="160" y="15" fill='black'>Y</text>
                 {/*// <!-- Значения R на оси X -->*/}
-                <text x="40" y="130" fill='black'>-R</text>
-                <text x="85" y="130" fill='black'>-R/2</text>
-                <text x="190" y="130" fill='black'>R/2</text>
-                <text x="245" y="130" fill='black'>R</text>
+                <text x="40" y="130" fill='black'>-{Math.abs(rValue)}</text>
+                <text x="85" y="130" fill='black'>-{Math.abs(rValue) / 2}</text>
+                <text x="190" y="130" fill='black'>{Math.abs(rValue) / 2}</text>
+                <text x="245" y="130" fill='black'>{Math.abs(rValue)}</text>
                 {/*// <!-- Значения R на оси Y -->*/}
-                <text x="170" y="52.5" fill='black'>R</text>
-                <text x="170" y="102.5" fill='black'>R/2</text>
-                <text x="170" y="202.5" fill='black'>-R/2</text>
-                <text x="170" y="252.5" fill='black'>-R</text>
+                <text x="170" y="52.5" fill='black'>{Math.abs(rValue)}</text>
+                <text x="170" y="102.5" fill='black'>{Math.abs(rValue) / 2}</text>
+                <text x="170" y="202.5" fill='black'>-{Math.abs(rValue) / 2}</text>
+                <text x="170" y="252.5" fill='black'>-{Math.abs(rValue)}</text>
             </svg>
 
         </div>

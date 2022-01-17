@@ -34,7 +34,7 @@ const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
             exTime: exTime,
             result: (hitCheck(xValue, yValue, rValue)).toString().toUpperCase()
         }
-        Validator.cleanText();
+        Validator.yCleanText();
         setPoints([...points, newPoint]);
     }
 

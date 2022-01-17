@@ -21,7 +21,8 @@ const Registration = () => {
                             <label htmlFor="username">Username:</label>
                             <MyInput
                                 type="text"
-                                maxLength={16}
+                                minLength={8}
+                                maxLength={20}
                                 id="username"
                                 name="username"
                                 placeholder="Enter your username"
@@ -31,6 +32,7 @@ const Registration = () => {
                         <div className='password'>
                             <label htmlFor="password">Password:</label>
                             <MyInput
+                                minL
                                 type="password"
                                 maxLength={16}
                                 id="password"
@@ -56,7 +58,6 @@ const Registration = () => {
                     <MyButton type="submit" value='Submit' className='reg_submit' id='reg_submit' >
                         <Link className='submit_link' to='/authorization'>Create account</Link>
                     </MyButton>
-
                 </div>
                 <div className='Error_text' id='Error_text'>
                     <span id="username_error"></span>

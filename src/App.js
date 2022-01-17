@@ -46,6 +46,7 @@ function App() {
             <Route path='/authorization'>
                 <Authorization/>
             </Route>
+            <Redirect to='/authorization'/>
         </BrowserRouter>
     )
 }
