@@ -25,20 +25,28 @@ import Form from "./Lab4/components/Form";
 import {findAllByDisplayValue} from "@testing-library/react";
 import TablePoint from "./Lab4/components/TablePoint";
 import Table from "./Lab4/components/Table";
+import Main from "./Lab4/pages/Main";
+import Registration from "./Lab4/pages/Registration";
+import Authorization from "./Lab4/pages/Authorization";
 
 function App() {
 
-    const [points, setPoints] = useState([]);
-    const [rValueForSvg , setRValueForSvg] = useState(1);
+    // const [points, setPoints] = useState([]);
+    // const [rValueForSvg , setRValueForSvg] = useState(1);
 
 
     return (
-        <div className="App">
-            <Header name='Matvey Chukhno' group='P3230' option='30035'/>
-            <Svg rValue={rValueForSvg}/>
-            <Form points={points} setPoints={setPoints} setRValueForSvg={setRValueForSvg} rValueForSvg={rValueForSvg}/>
-            <Table points={points}/>
-        </div>
+        <BrowserRouter>
+            <Route path='/main'>
+                <Main/>
+            </Route>
+            <Route path='/registration'>
+                <Registration/>
+            </Route>
+            <Route path='/authorization'>
+                <Authorization/>
+            </Route>
+        </BrowserRouter>
     )
 }
 

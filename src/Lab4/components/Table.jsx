@@ -1,9 +1,15 @@
 import React from 'react';
 import TablePoint from "./TablePoint";
+import {CSSTransition} from "react-transition-group";
+import MyButton from "./UI/MyButton/MyButton";
+import {Link} from "react-router-dom";
 
 const Table = ({points}) => {
     return (
         <section className='table_section'>
+            <MyButton id='logout_button'>
+                <Link to='/authorization' className='logout_link'>Log Out</Link>
+            </MyButton>
             <div>
                 <table id='table'>
 
@@ -19,7 +25,7 @@ const Table = ({points}) => {
                     </thead>
                     <tbody>
 
-                    {points.map((point , index) =>
+                    {points.map((point, index) =>
                         <TablePoint
                             x={point.x}
                             y={point.y}

@@ -17,10 +17,7 @@ header{
     text-align: center;
 }
 
-/**{*/
-/*    background-color: #D1BBED;*/
-/*    !*background: rgb(220,220,220);*!*/
-/*}*/
+
 body{
     background-color: #D1BBED;
 }
@@ -54,7 +51,6 @@ body{
 .x_value {
     font-size: 20px;
     max-width: 400px;
-    /*margin: 5% 0 0;*/
     position: relative;
     background: #D0B1E5;
     top: 15px;
@@ -76,7 +72,6 @@ body{
     top: 15px;
     margin: 0 auto;
 }
-
 
 
 .section_lab .r_value {
@@ -141,7 +136,7 @@ body{
 
 #Y_error{
     position: relative;
-    margin-top: 5%;
+    margin-top: 10%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -149,3 +144,135 @@ body{
     font-size: 20px;
 }
 
+.login_text{
+    font-family: 'Open Sans Condensed', sans-serif;
+    position: absolute;
+    /*margin-left: auto;*/
+    margin-top: 1%;
+    margin-left: 13%;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+#auth_form{
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 30%;
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    background: #D0B1E5;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.username{
+    font-size: 20px;
+    max-width: 400px;
+    position: relative;
+    background: #D0B1E5;
+    top: 45px;
+    margin: 0 auto;
+}
+
+.password{
+    font-size: 20px;
+    max-width: 400px;
+    position: relative;
+    background: #D0B1E5;
+    top: 45px;
+    margin: 0 auto;
+}
+
+#password{
+    width: 100%;
+    padding: 5px 15px;
+    margin: 5px 0;
+    border: 1px solid teal;
+}
+
+#username{
+    width: 100%;
+    padding: 5px 15px;
+    margin: 5px 0;
+    border: 1px solid teal;
+}
+
+#repeat_password{
+    width: 100%;
+    padding: 5px 15px;
+    margin: 5px 0;
+    border: 1px solid teal;
+}
+
+.auth_buttons{
+    font-size: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    position: relative;
+    top: 35px;
+    margin-top: 3%;
+}
+
+#username_error{
+    position: relative;
+    margin-top: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-size: 20px;
+}
+
+#password_error{
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    font-size: 20px;
+}
+
+.submit_link{
+    text-decoration: none;
+    cursor: default;
+}
+
+.reg_link{
+    text-decoration : none;
+    cursor: default;
+}
+
+#logout_button{
+    width: 100%;
+    display: inline-block;
+    right: 15.5%;
+    background: transparent;
+    border-radius: 10px;
+    height: 30px;
+}
+
+.logout_link{
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+#reg_form{
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 30%;
+    width: 500px;
+    height: 400px;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+    background: #D0B1E5;
+    border-radius: 20px 20px 20px 20px;
+}
+
+#reg_submit{
+    margin-top: 3%;
+    width: 70%;
+    display: inline-block;
+
+}
