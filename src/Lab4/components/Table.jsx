@@ -24,7 +24,6 @@ const Table = ({points}) => {
                     </tr>
                     </thead>
                     <tbody>
-
                     {points.map((point, index) =>
                         <TablePoint
                             x={point.x}

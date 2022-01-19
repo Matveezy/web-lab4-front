@@ -1,5 +1,5 @@
 export const isRectangle = (x, y, r) => {
-    if ((x >= r / 2) && (x < 0) && (y <= r) && (y >= 0)) {
+    if (( (-x) <= r / 2) && (x < 0) && (y <= r) && (y >= 0)) {
         return true;
     }
     return false;

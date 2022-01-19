@@ -68,12 +68,13 @@ export default class Validator {
             password_error.innerHTML = 'Введите пароль!'
             return false;
         }
-        if (/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(password)){
+        if (/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{6,16}$/.test(password)=== false){
             password_error.innerHTML = 'Введите корректный пароль!'
             return false;
         }
         return true;
         }
+
 
         static cleanPasswordError(){
             let login_error = document.getElementById('password_error');

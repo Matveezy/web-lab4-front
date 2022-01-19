@@ -6,35 +6,37 @@ import {Link} from "react-router-dom";
 import Validator from "../utils/validator";
 
 const Authorization = () => {
-
-    const [userName, setUserName] = useState('');
-    const [password, setPassword] = useState('');
+    const [authForm , setAuthForm] = useState({username: '' , password: ''})
+    // const [userName, setUserName] = useState('');
+    // const [password, setPassword] = useState('');
 
     const submitAuth = (e) => {
         e.preventDefault();
-        if ((Validator.validateUserName(userName).toString() !== 'true')) {
+        if ((Validator.validateUserName(authForm.username).toString() !== 'true')) {
             return;
-        } else if (Validator.validateUserName(userName).toString() === 'true') {
+        } else if (Validator.validateUserName(authForm.username).toString() === 'true') {
             Validator.cleanUserNameError();
         }
-        if (Validator.validatePassword(password).toString() !== 'true') {
+        if (Validator.validatePassword(authForm.password).toString() !== 'true') {
             return;
         }
         Validator.cleanPasswordError();
+        setAuthForm({username : '' ,  password : ''});
     }
 
     const submitAuthLink = (e) => {
-        if ((Validator.validateUserName(userName).toString() !== 'true')) {
+        if ((Validator.validateUserName(authForm.username).toString() !== 'true')) {
             e.preventDefault();
             return;
-        } else if (Validator.validateUserName(userName).toString() === 'true') {
+        } else if (Validator.validateUserName(authForm.username).toString() === 'true') {
             Validator.cleanUserNameError();
         }
-        if (Validator.validatePassword(password).toString() !== 'true') {
+        if (Validator.validatePassword(authForm.password).toString() !== 'true') {
             e.preventDefault();
             return;
         }
         Validator.cleanPasswordError();
+        setAuthForm({username : '' ,  password : ''});
     }
 
     return (
@@ -53,7 +55,7 @@ const Authorization = () => {
                                 id="username"
                                 name="username"
                                 placeholder="Enter your username"
-                                onChange={(e) => setUserName(e.target.value)}
+                                onChange={(e) => setAuthForm({...authForm , username : e.target.value })}
                             />
                         </div>
                         <div className='password'>
@@ -64,13 +66,13 @@ const Authorization = () => {
                                 id="password"
                                 name="password"
                                 placeholder="Enter your password"
-                                onChange={(e) => setPassword(e.target.value)}
+                                onChange={(e) => setAuthForm({...authForm , password : e.target.value})}
                             />
                         </div>
                     </div>
                 </div>
                 <div className="auth_buttons">
-                    <MyButton type="submit" value='Submit' className='auth_submit' onClick={(e) => submitAuthLink(e)}>
+                    <MyButton type="submit" value='Submit' className='auth_submit' onClick={(e) => submitAuth(e)}>
                         <Link onClick={(e) => submitAuthLink(e)} className='submit_link' to='/main'>Sign in</Link>
                     </MyButton>
                     <MyButton type="reset" value='Reset' className='auth_reset'>

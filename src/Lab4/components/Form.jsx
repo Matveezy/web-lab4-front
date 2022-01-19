@@ -6,6 +6,7 @@ import MyInput from "./UI/MyInput/MyInput";
 import Validator from "../utils/validator";
 import {getTime} from "../utils/Time";
 import {hitCheck} from "../utils/HitChecker";
+import Drawing from "../utils/Drawing";
 
 const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
 
@@ -39,9 +40,11 @@ const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
     }
 
     const onChangeR = (e)=>{
-        setRValue(parseInt(e));
-        setRValueForSvg(parseInt(e));
+        setRValue(parseFloat(e));
+        setRValueForSvg(parseFloat(e));
+        Drawing.svgDrawing(rValueForSvg);
     }
+
 
     return (
         <section className='section_lab'>
@@ -55,8 +58,8 @@ const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
                                 defaultValue={1}
                                 min={-3}
                                 max={5}
-                                step={0.1}
-                                onChange={(e) => setXValue(parseInt(e))}
+                                step={0.01}
+                                onChange={(e) => setXValue(parseFloat(e))}
                             />
                         </div>
                         <div className='y_value'>
@@ -77,9 +80,9 @@ const Form = ({points, setPoints , setRValueForSvg , rValueForSvg}) => {
                             <div>{rValue}</div>
                             <MySlider
                                 defaultValue={1}
-                                min={-3}
-                                max={5}
-                                step={0.1}
+                                min={-2}
+                                max={1.3}
+                                step={0.01}
                                 onChange={(e) => onChangeR(e)}
                             />
                         </div>
